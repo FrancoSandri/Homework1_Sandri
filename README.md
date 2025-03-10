@@ -52,3 +52,39 @@ M[0][0] = 1
    ./programa
    ```
 
+---
+
+### Parte 2-a
+
+En muchos sistemas, es importante registrar eventos relevantes. Cada evento tiene un nivel de severidad, como:
+- DEBUG
+- INFO
+- WARNING
+- ERROR
+- CRITICAL
+
+#### Objetivo:
+Implementar una función `logMessage` que agregue entradas a un archivo de log con el siguiente formato:
+```
+[ERROR] <Mensaje>
+[INFO] <Mensaje>
+```
+Debe verificarse el funcionamiento con al menos una entrada de cada tipo.
+
+---
+
+## Comandos para compilar y ejecutar el código en C++
+
+1. Cambiar el directorio
+   ```sh
+   cd Ejercicio_2
+   ```
+
+2. Compilar el código:
+   ```sh
+   g++ main.cpp -o programa
+   ```
+3. Ejecutar el programa:
+   ```sh
+   ./programa
+   ```
