@@ -38,7 +38,12 @@ M[0][0] = 1
 
 ## Comandos para compilar y ejecutar el código en C++
 
-1. Compilar el código:
+1. Cambiar el directorio:
+   ```sh
+   cd Ejercicio_1
+   ```
+
+2. Compilar el código:
    ```sh
    g++ main.cpp -o programa
    ```
