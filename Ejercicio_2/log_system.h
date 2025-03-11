@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-enum class LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL };
+enum class LogLevel { DEBUG, INFO, WARNING, ERROR, CRITICAL, SECURITY};
 
 void logMessage(const string& mensaje, LogLevel nivel);
 

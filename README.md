@@ -88,3 +88,44 @@ Debe verificarse el funcionamiento con al menos una entrada de cada tipo.
    ```sh
    ./programa
    ```
+
+### Parte 2b - Extensión del Sistema de Registro
+
+Se requiere agregar funcionalidades adicionales al sistema de log:
+
+1. **Registro de errores con archivo y línea:**
+   ```cpp
+   logMessage("Mensaje de error", "archivo.cpp", 42);
+   ```
+   Esto generará un log con el siguiente formato:
+   ```
+   [ERROR] Mensaje de error (Archivo: archivo.cpp, Línea: 42)
+   ```
+
+2. **Registro de eventos de seguridad:**
+   ```cpp
+   logMessage("Access Granted", "usuario123");
+   logMessage("Access Denied", "invitado");
+   ```
+   Esto generará logs con el formato:
+   ```
+   [SECURITY] Access Granted (Usuario: usuario123)
+   [SECURITY] Access Denied (Usuario: invitado)
+   ```
+
+3. **Captura de errores en tiempo de ejecución:**
+   - Si se produce una excepción en tiempo de ejecución, el programa deberá capturarla, registrarla en el log e interrumpir su ejecución con `return 1`.
+
+---
+
+## Comandos para compilar y ejecutar el código en C++
+
+
+1. Compilar el código:
+   ```sh
+   g++ log_system_v2.cpp -o log_program
+   ```
+3. Ejecutar el programa:
+   ```sh
+   ./log_program
+   ```

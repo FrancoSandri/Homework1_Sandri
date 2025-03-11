@@ -1,0 +1,13 @@
+[DEBUG] Mensaje de depuración
+[INFO] Mensaje informativo
+[WARNING] Mensaje de advertencia
+[ERROR] Mensaje de error
+[CRITICAL] Mensaje crítico
+[DEBUG] Mensaje de depuración
+[INFO] Mensaje informativo
+[WARNING] Mensaje de advertencia
+[ERROR] Mensaje de error
+[CRITICAL] Mensaje crítico
+[SECURITY] Access Granted (Usuario: usuario123)
+[SECURITY] Access Denied (Usuario: invitado)
+[ERROR] Excepción de prueba (Archivo: log_system_v2.cpp, Línea: 60)
