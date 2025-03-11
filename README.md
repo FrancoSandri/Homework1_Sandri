@@ -129,3 +129,36 @@ Se requiere agregar funcionalidades adicionales al sistema de log:
    ```sh
    ./log_program
    ```
+
+### Parte 3
+
+Se requiere implementar una lista enlazada utilizando std::unique_ptr. La lista debe contar con las siguientes funciones:
+
+- create_node(): Crea y devuelve un nodo.
+- push_front(int value): Inserta un nodo al frente de la lista.
+- push_back(int value): Inserta un nodo al final de la lista.
+- insert(int value, int position): Inserta un nodo en la posición indicada. Si la posición es mayor que el largo de la lista, debe insertarse al final y mostrar un mensaje informativo.
+- erase(int position): Elimina el nodo en la posición indicada. Si la posición es mayor que el largo de la lista, debe eliminar el último nodo y mostrar un mensaje informativo.
+- print_list(): Imprime la lista enlazada en el formato
+```
+1 -> 2 -> 3 -> nullptr
+```
+
+---
+
+## Comandos para compilar y ejecutar el código en C++
+
+1. Cambiar el directorio
+   ```sh
+   cd Ejercicio_3
+   ```
+
+2. Compilar el código:
+   ```sh
+   g++ linked_list.cpp -o linked_list
+   ```
+3. Ejecutar el programa:
+   ```sh
+   ./linked_list
+   ```
+   
