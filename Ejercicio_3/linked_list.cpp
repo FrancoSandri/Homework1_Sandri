@@ -55,19 +55,22 @@ void LinkedList::erase(int position) {
     }
 
     Node* temp = head.get();
+    Node* prev = nullptr;
     int index = 0;
 
-    while (temp->next && index < position - 1) {
+    while (temp->next) {
+        if (index == position - 1) { // Encontramos el nodo anterior al que queremos borrar
+            temp->next = move(temp->next->next);
+            return;
+        }
+        prev = temp;
         temp = temp->next.get();
         index++;
     }
-
-    if (!temp->next) {
+    if (prev) {
         cout << "Posición fuera de rango, eliminando el último nodo." << endl;
-        return;
+        prev->next = nullptr;
     }
-
-    temp->next = move(temp->next->next);
 }
 
 void LinkedList::print_list() {
@@ -94,12 +97,12 @@ int main() {
     cout << "Lista después de push_back: ";
     list.print_list();
 
-    list.insert(25, 2); // Debe insertarse entre 20 y 10
+    list.insert(25, 2); 
     list.insert(60, 10); // Fuera de rango, se agrega al final
     cout << "Lista después de insert(): ";
     list.print_list();
 
-    list.erase(2); // Borra el nodo con valor 25
+    list.erase(2); 
     list.erase(10); // Fuera de rango, borra el último nodo
     cout << "Lista después de erase(): ";
     list.print_list();
