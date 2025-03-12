@@ -141,7 +141,7 @@ Se requiere implementar una lista enlazada utilizando std::unique_ptr. La lista 
 - erase(int position): Elimina el nodo en la posición indicada. Si la posición es mayor que el largo de la lista, debe eliminar el último nodo y mostrar un mensaje informativo.
 - print_list(): Imprime la lista enlazada en el formato
 ```
-1 -> 2 -> 3 -> nullptr
+1 -> 2 -> 3
 ```
 
 ---
