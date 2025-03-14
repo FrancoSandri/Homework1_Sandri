@@ -1,14 +1,12 @@
 #include "linked_list.h"
 
-LinkedList::LinkedList() : head(nullptr) {}
-
-void LinkedList::push_front(int value) {
+void push_front(unique_ptr<Node>& head, int value) {
     unique_ptr<Node> new_node = make_unique<Node>(value);
     new_node->next = move(head);
     head = move(new_node);
 }
 
-void LinkedList::push_back(int value) {
+void push_back(unique_ptr<Node>& head, int value) {
     unique_ptr<Node> new_node = make_unique<Node>(value);
     if (!head) {
         head = move(new_node);
@@ -21,9 +19,9 @@ void LinkedList::push_back(int value) {
     temp->next = move(new_node);
 }
 
-void LinkedList::insert(int value, int position) {
+void insert(unique_ptr<Node>& head, int value, int position) {
     if (position == 0) {
-        push_front(value);
+        push_front(head, value);
         return;
     }
 
@@ -37,7 +35,7 @@ void LinkedList::insert(int value, int position) {
 
     if (!temp) {
         cout << "Posición fuera de rango, insertando al final." << endl;
-        push_back(value);
+        push_back(head, value);
         return;
     }
 
@@ -46,7 +44,7 @@ void LinkedList::insert(int value, int position) {
     temp->next = move(new_node);
 }
 
-void LinkedList::erase(int position) {
+void erase(unique_ptr<Node>& head, int position) {
     if (!head) return;
 
     if (position == 0) {
@@ -59,7 +57,7 @@ void LinkedList::erase(int position) {
     int index = 0;
 
     while (temp->next) {
-        if (index == position - 1) { // Encontramos el nodo anterior al que queremos borrar
+        if (index == position - 1) { 
             temp->next = move(temp->next->next);
             return;
         }
@@ -67,13 +65,14 @@ void LinkedList::erase(int position) {
         temp = temp->next.get();
         index++;
     }
+
     if (prev) {
         cout << "Posición fuera de rango, eliminando el último nodo." << endl;
         prev->next = nullptr;
     }
 }
 
-void LinkedList::print_list() {
+void print_list(const unique_ptr<Node>& head) {
     Node* temp = head.get();
     while (temp) {
         cout << temp->value;
@@ -84,28 +83,28 @@ void LinkedList::print_list() {
 }
 
 int main() {
-    LinkedList list;
+    unique_ptr<Node> head = nullptr;
 
-    list.push_front(10);
-    list.push_front(20);
-    list.push_front(30);
+    push_front(head, 10);
+    push_front(head, 20);
+    push_front(head, 30);
     cout << "Lista después de push_front: ";
-    list.print_list();
+    print_list(head);
 
-    list.push_back(40);
-    list.push_back(50);
+    push_back(head, 40);
+    push_back(head, 50);
     cout << "Lista después de push_back: ";
-    list.print_list();
+    print_list(head);
 
-    list.insert(25, 2); 
-    list.insert(60, 10); // Fuera de rango, se agrega al final
+    insert(head, 25, 2);
+    insert(head, 60, 10);
     cout << "Lista después de insert(): ";
-    list.print_list();
+    print_list(head);
 
-    list.erase(2); 
-    list.erase(10); // Fuera de rango, borra el último nodo
+    erase(head, 2);
+    erase(head, 10); 
     cout << "Lista después de erase(): ";
-    list.print_list();
+    print_list(head);
 
     return 0;
 }

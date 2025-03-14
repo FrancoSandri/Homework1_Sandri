@@ -13,17 +13,11 @@ struct Node {
     Node(int val) : value(val), next(nullptr) {}
 };
 
-class LinkedList {
-public:
-    LinkedList();
-    void push_front(int value);
-    void push_back(int value);
-    void insert(int value, int position);
-    void erase(int position);
-    void print_list();
-    
-private:
-    unique_ptr<Node> head;
-};
+// Funciones para manipular la lista enlazada
+void push_front(unique_ptr<Node>& head, int value);
+void push_back(unique_ptr<Node>& head, int value);
+void insert(unique_ptr<Node>& head, int value, int position);
+void erase(unique_ptr<Node>& head, int position);
+void print_list(const unique_ptr<Node>& head);
 
-#endif 
+#endif // LINKED_LIST_H
