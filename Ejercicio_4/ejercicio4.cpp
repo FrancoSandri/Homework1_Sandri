@@ -18,8 +18,8 @@ bool compareStrings(const string& str1, const string& str2, size_t index = 0) {
 }
 
 int main() {
-    string text1 = "This is a sample text to demonstrate the recursive string comparison function.";
-    string text2 = "This is a sample text to demonstrate the recursive string comparison function.";
+    string text1 = "Esto es un texto para demostrar la funcion recursiva que compara strings";
+    string text2 = "Esto es un texto para demostrar la funcion recursiva que compara strings";
 
     auto startTime = std::chrono::high_resolution_clock::now();
     bool areEqual = compareStrings(text1, text2, text1.length());
@@ -27,7 +27,7 @@ int main() {
     auto elapsedTime = std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - startTime);
 
     std::cout << "Los strings son " << (areEqual ? "iguales" : "diferentes") << "." << std::endl;
-    std::cout << "Tiempo de ejecución: " << elapsedTime.count() << " nanosegundos" << std::endl;
+    std::cout << "A miProcesoAMedir le tomó: " << elapsedTime.count() << " nanosegundos" << std::endl;
 
     return 0;
 }
