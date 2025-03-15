@@ -1,5 +1,5 @@
 #include <iostream>
-#include "matriz.h"
+#include "ejercicio1.h"
 
 using namespace std;
 
@@ -7,6 +7,7 @@ using namespace std;
 /*
 a. Crear una función que dado un valor entero “n”, positivo y mayor a uno, devuelva una matriz cuadrada con valores como en los siguientes ejemplos para n=2 y n=3:
 */
+
 vector<vector<int>> crearMatriz(int n) {
     vector<vector<int>> matriz(n, vector<int>(n));
     int valor = 1;

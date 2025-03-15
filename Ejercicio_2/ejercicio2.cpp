@@ -1,4 +1,4 @@
-#include "log_system.h"
+#include "ejercicio2.h"
 #include <iostream>
 #include <fstream>
 

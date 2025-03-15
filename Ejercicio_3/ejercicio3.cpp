@@ -1,4 +1,4 @@
-#include "linked_list.h"
+#include "ejercicio3.h"
 
 void push_front(unique_ptr<Node>& head, int value) {
     unique_ptr<Node> new_node = make_unique<Node>(value);
@@ -8,14 +8,17 @@ void push_front(unique_ptr<Node>& head, int value) {
 
 void push_back(unique_ptr<Node>& head, int value) {
     unique_ptr<Node> new_node = make_unique<Node>(value);
-    if (!head) {
+    Node* temp = head.get();
+
+    if (!temp) {
         head = move(new_node);
         return;
     }
-    Node* temp = head.get();
+
     while (temp->next) {
         temp = temp->next.get();
     }
+
     temp->next = move(new_node);
 }
 

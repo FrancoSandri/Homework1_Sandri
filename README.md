@@ -45,11 +45,11 @@ M[0][0] = 1
 
 2. Compilar el código:
    ```sh
-   g++ main.cpp -o programa
+   g++ ejercicio1.cpp -o ejercicio1
    ```
 2. Ejecutar el programa:
    ```sh
-   ./programa
+   ./ejercicio1
    ```
 
 ---
@@ -82,11 +82,11 @@ Debe verificarse el funcionamiento con al menos una entrada de cada tipo.
 
 2. Compilar el código:
    ```sh
-   g++ main.cpp -o programa
+   g++ ejercicio2.cpp -o ejercicio2
    ```
 3. Ejecutar el programa:
    ```sh
-   ./programa
+   ./ejercicio2
    ```
 
 ### Parte 2b - Extensión del Sistema de Registro
@@ -123,11 +123,11 @@ Se requiere agregar funcionalidades adicionales al sistema de log:
 
 1. Compilar el código:
    ```sh
-   g++ log_system_v2.cpp -o log_program
+   g++ ejercicio2b.cpp -o ejercicio2b
    ```
 3. Ejecutar el programa:
    ```sh
-   ./log_program
+   ./ejercicio2
    ```
 
 ### Parte 3
@@ -155,10 +155,35 @@ Se requiere implementar una lista enlazada utilizando std::unique_ptr. La lista 
 
 2. Compilar el código:
    ```sh
-   g++ linked_list.cpp -o linked_list
+   g++ ejercicio3.cpp -o ejercicio3
    ```
 3. Ejecutar el programa:
    ```sh
-   ./linked_list
+   ./ejercicio3
+   ```
+   
+
+### Parte 4
+
+
+
+---
+
+## Comandos para compilar y ejecutar el código en C++
+
+1. Cambiar el directorio
+   ```sh
+   cd Ejercicio_4
+   ```
+
+2. Compilar el código:
+   ```sh
+   g++ ejercicio4.cpp -o ejercicio4
+   g++ ejercicio4comp.cpp -o ejercicio4comp
+   ```
+3. Ejecutar el programa:
+   ```sh
+   ./ejercicio4
+   ./ejercicio4comp
    ```
    

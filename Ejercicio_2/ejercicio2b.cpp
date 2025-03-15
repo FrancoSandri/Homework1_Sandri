@@ -1,5 +1,4 @@
-// log_system_v2.cpp
-#include "log_system.h"
+#include "ejercicio2.h"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

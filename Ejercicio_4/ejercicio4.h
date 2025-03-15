@@ -5,7 +5,6 @@
 
 using namespace std;
 
-// Function declarations
 bool compareStrings(const std::string& str1, const std::string& str2);
 void measureExecutionTime();
 
