@@ -165,7 +165,12 @@ Se requiere implementar una lista enlazada utilizando std::unique_ptr. La lista 
 
 ### Parte 4
 
+Se compara el tiempo de ejecución entre dos versiones del programa:
+- Uno en tiempo de ejecución y el otro en tiempo de compilación.
 
+La consigna trata de aplicar una función recursiva que compare dos variables de texto e indique si son iguales o diferentes mediante un bool.
+
+La conclusión y el justificativo de porque el uso de strings o char está en los archivos .cpp
 
 ---
 
