@@ -36,9 +36,9 @@ bool compareStrings(const string& str1, const string& str2, size_t index = 0) {
 
 int main() {
     // Textos de prueba
-    string text1 = "Esto es un texto de prueba para demostrar la funcion recursiva que compara strings";
-    string text2 = "Esto es un texto de prueba para demostrar la funcion recursiva que compara strings";
-
+    string text1 = "El Club Atlético Colegiales es un club de fútbol argentino, radicado en el barrio de Munro, partido de Vicente López, provincia de Buenos Aires. Fue fundado el 1 de abril de 1908 bajo el nombre Libertarios Unidos, nombre que actualmente lleva su estadio. Desde 2025 participará en la Primera Nacional, la segunda categoría del fútbol argentino.";
+    string text2 = "El Club Atlético Colegiales es un club de fútbol argentino, radicado en el barrio de Munro, partido de Vicente López, provincia de Buenos Aires. Fue fundado el 1 de abril de 1908 bajo el nombre Libertarios Unidos, nombre que actualmente lleva su estadio. Desde 2025 participará en la Primera Nacional, la segunda categoría del fútbol argentino.";
+    
     // Código previsto en el enunciado del Homework
     auto startTime = std::chrono::high_resolution_clock::now();
     bool areEqual = compareStrings(text1, text2, text1.length());

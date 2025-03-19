@@ -12,8 +12,8 @@ constexpr bool compareStringsConstexpr(const char* str1, const char* str2) {
     return *str1 == '\0' ? *str2 == '\0' : (*str1 == *str2 && compareStringsConstexpr(str1 + 1, str2 + 1));
 }
 
-constexpr const char text1[] = "Esto es un texto de prueba para demostrar la funcion recursiva que compara strings.";
-constexpr const char text2[] = "Esto es un texto de prueba para demostrar la funcion recursiva que compara strings.";
+constexpr const char text1[] = "El Club Atlético Colegiales es un club de fútbol argentino, radicado en el barrio de Munro, partido de Vicente López, provincia de Buenos Aires. Fue fundado el 1 de abril de 1908 bajo el nombre Libertarios Unidos, nombre que actualmente lleva su estadio. Desde 2025 participará en la Primera Nacional, la segunda categoría del fútbol argentino.";
+constexpr const char text2[] = "El Club Atlético Colegiales es un club de fútbol argentino, radicado en el barrio de Munro, partido de Vicente López, provincia de Buenos Aires. Fue fundado el 1 de abril de 1908 bajo el nombre Libertarios Unidos, nombre que actualmente lleva su estadio. Desde 2025 participará en la Primera Nacional, la segunda categoría del fútbol argentino.";
 
 int main() {
     // Código previsto en el enunciado del Homework.
