@@ -5,7 +5,9 @@
 
 // Este archivo esta hecho para que se ejecute en tiempo de compilación.
 // Se le agrega la palabra constexpr a las declaraciones de las funciones y las variables.
-// Se cambia el tipo de dato de string a char* para que se pueda ejecutar en tiempo de compilación.
+// Cambio el tipo de dato de string a char* para que se pueda ejecutar en tiempo de compilación.
+// Esto lo hice porque char* permite que los datos se almacenen en la memoria estática del compilador y puedan ser evaluados en tiempo de compilación.
+
 
 // Función que compara dos strings de forma recursiva y devuelve true si son iguales, false si son diferentes.
 constexpr bool compareStringsConstexpr(const char* str1, const char* str2) {
@@ -32,7 +34,9 @@ int main() {
 /*
 Conclusión:
 La comparación en tiempo de compilación (`constexpr`) hace que el resultado se calcule antes de ejecutar el programa.
-Esto significa que el tiempo de ejecución medido es prácticamente cero, ya que el compilador ya resolvió la comparación.
-En contraste, la versión del ejercicio 4.2 realizaba la comparación en tiempo de ejecución, lo que afectaba el rendimiento debido a la recursión 
-y las operaciones en memoria.
+Se evita el uso de memoria dinámica y se almacena en la memoria estática del compilador.
+Se evita también, que se tenga que gestionar la pila para cada llamado recursivo, reemplazando la función con su resultado final. 
+
+Es por eso que todos estos procesos de manejo de memoria que se evitan, ayudan a que el tiempo que tardan en ejecutarse ambos archivos sean diferentes.
+Siento este mismo, considerablemente menor, al primero. 
 */

@@ -13,8 +13,7 @@ el siguiente item de este ejercicio antes de elegir el tipo de variable) y demue
 la funcionalidad de su código con un texto de, al menos, 64 caracteres.
 */
 
-// Se eligió el tipo string porque es más fácil de usar y manipular que un puntero a char.
-// Además, string es un tipo de dato más seguro que char* ya que se encarga de la gestión de memoria.
+// Elegí el tipo string porque gestiona el manejo de memoria internamente, evitando leaks y errores de acceso.
 
 // Función que compara dos strings de forma recursiva y devuelve true si son iguales, false si son diferentes.
 bool compareStrings(const string& str1, const string& str2, size_t index = 0) {
